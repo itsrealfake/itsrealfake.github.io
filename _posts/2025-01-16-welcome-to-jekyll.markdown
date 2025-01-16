@@ -5,8 +5,12 @@ date:   2025-01-16 13:12:47 -0600
 categories: update
 ---
 
+# Hello World
+
 "hello world". i'm spinning up this Jekyll site for the BOSS bootcamp with Chaincode. I'll publish things here sometimes, and it may be helpful
 
+
+## Jekyll initial stuffs
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
