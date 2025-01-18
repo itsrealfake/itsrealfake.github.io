@@ -211,4 +211,23 @@ Also, we're passing this `tprv` by reference, and i wonder about how that's goin
 
 Since we're only looking to collect our balance at this point in the challenge, i wonder if it would be okay to presume a public key is being used. Later, we can extend the `ExKey` to include private keys? Maybe that's too silly.
 
+(( took a little break for dinner ))
+
+Looking into the assignment a bit further, it's apparent that i can get away without playing around with the public/private key length difference. it's good to know that it's there though.
+
+I think i need to look up some more information about wallet recovery steps. Now that i have the key
+
+### Refactor the Base58 Decoder to use this new `BalanceError` enum
+
+feels good to get that done, but i didn't really want to do it immediately. however, Rust kinda forces your hand with the compiler parts.
+
+## But first, some downtime.
+
+now i've got to get to bed, or at least go away from this computer screen. The next step should be implementing the secp256k1 i guess?
+
+I'll read some of Mastering Bitcoin 3rd Edition, and perhaps things will start to become more clear to me. I'm definitely having trouble keeping up, and feel like the pace of the group is faster than my own pace. That said, i feel more comfortable in Rust the more time i spend with it.
+
+certainly though, the challenge of thinking in bytes is not something I (a programmer who's used interpreted programs for all of my career) naturally understand.
+
+
 
