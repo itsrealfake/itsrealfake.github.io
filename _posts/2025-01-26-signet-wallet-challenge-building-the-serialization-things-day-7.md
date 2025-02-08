@@ -71,3 +71,49 @@ okay, so now we need to get our wallet state from the file cache if it exists.
 
 okay, this seems to be working correctly. we now have a cached wallet state, that can be used in the spending functionality (we hope).
 
+## Given a wallet state, let's find an unspent transaction with a value greater than .01 btc
+
+```
+pub struct WalletState {
+    pub utxos: Vec<Vec<u8>>,
+    pub utxo_map: UtxoMap,
+    pub witness_programs: Vec<Vec<u8>>,
+    pub public_keys: Vec<Vec<u8>>,
+    pub private_keys: Vec<Vec<u8>>,
+}
+pub struct UtxoMap(pub HashMap<(String, u32), UTXO>);
+pub struct UTXO {
+    pub pub_key_or_witness: Vec<u8>,
+    pub value_f: f64,
+    pub value: u64,
+}
+```
+
+given a `WalletState`, find all the UTXOs that are more than 0.01btc in size.
+
+let's first print their pubkey or witness to the console so that i can see what we're working with.
+
+## create input from the utxo
+
+We're asked to send a transaction with these values:
+
+`FEE = 1000`
+`AMT = 1000000`
+
+
+
+### What are the steps to create a p2wpkh transaction?
+
+
+1. Reverse the txid hash, so it's little-endian
+2. Compute the destination output script and output 
+3. Compute the change output script and output
+
+
+## damn, i really thought this UtxoMap was a good idea, but it's become a real pain in the butt
+
+in addition to not quite understanding the structure of a transaction, it's not easy to get the TXID in bytes, since i've turned it into a tuple.
+
+maybe this can be resolved?
+
+

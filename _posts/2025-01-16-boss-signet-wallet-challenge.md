@@ -137,3 +137,14 @@ fn main() {
 
 i didn't know if my work was right, and there's a bonus point available for verifying the checksum. so i worked with the LLM some more and broke out the checksum verification. i've wrapped up the base58_decode step for the day. and i need to get some dinner, seems like i spent about 3 hours to get this far, and i was taking a lot of notes in this document.
 
+## Loading the wallet
+
+in order to use the thing, you need to have it loaded:
+
+`bitcoind -signet` starts bitcoind
+
+`bitcoin-cli -signet importdescriptors '[{"desc":"wpkh(tprv8ZgxMBicQKsPdcpHEL3yNDcHEXKgJ1R8mPz1doXUyqAcRQh5Z7MxBj29hd8dnzTKSFW1DuCbDM8Co8zEKVtqToNWE6bzggXTS1vofwtFkRa/84h/1h/0h/0/*)#j7pgnst0","active":true,"range":[0,1999],"timestamp":"now"}]' ` imports your descriptors (these are my descriptors for a fake wallet, so do what you will)
+
+
+then rescan the chain
+`bitcoin-cli -signet rescanblockchain 0 350`
