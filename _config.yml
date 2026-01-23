@@ -42,7 +42,10 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - tools/
+  - from_joplin/
+  
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
